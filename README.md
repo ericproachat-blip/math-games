@@ -176,6 +176,22 @@ After you run the `npm run build` command, your code will be built into a single
 
 In order to deploy your game, you will need to upload *all* of the contents of the `dist` folder to a public facing web server.
 
+### Deploy to GitHub Pages
+
+This project is ready for GitHub Pages using GitHub Actions.
+
+1. Push your code to the `main` branch.
+2. In GitHub, open **Settings > Pages**.
+3. For **Source**, select **GitHub Actions**.
+4. The workflow in `.github/workflows/deploy-pages.yml` will build and deploy automatically on each push to `main`.
+
+Local production checks before pushing:
+
+```bash
+npm run build:pages
+npm run preview:dist
+```
+
 ## Customizing the Template
 
 ### Vite
